@@ -18,24 +18,34 @@ Here is a step by step guide so you too can amaze your friends and family.
 
 In IntelliJ Click New Project
 On the left select Kotlin Multiplatform
-On the right selct Console Application and Gradle Groovy
+On the right select Console Application and Gradle Groovy
 We need Groovy to have a gradle.build file so we can add the co-routine dependencies
 At this point we also define the name of the project.
 This demo project is called CoolCouroutineProject
 Click Next, then Finish
 
+NOTE: You MUST wait for IntelliJ to complete indexing the project before setting up the configuration.
+If you try to edit the configuration (next step) before IntelliJ has finished indexing the project,
+you will fail. Monitor the status in the bottom tool bar.
+
 You should now have a new project.
 The next step is to edit the configuration.
 Click the drop down menu on Current File in the right side of the Tool Bar
 In top left click "+" and Select Kotlin
-in the Name edit box enter MainKt
-click on the Use classpath of module
+
+In the Name edit box enter MainKt.  
+
+Click on the Use classpath of module
 select <project_name>.main
+(Note this is the step that fails if you don't wait for IntelliJ to complete indexing the project.
+If you do not see <project_name>.main in the "Use classpath of module" drop-down,
+you did not wait long enough.)
 
 Next click the ellipsis to the right of Main Class
 Getting the main class configured is the key to creating the configuration
+
 IntelliJ will search for a few moments then display
-MainKt                <project_name>.main
+<project_name>.main
 Select that then click Apply and OK
 
 At this point you can now run the default "Hello World application"
